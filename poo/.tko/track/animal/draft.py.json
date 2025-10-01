@@ -1,0 +1,59 @@
+{
+    "patches": [
+        {
+            "label": "2025-09-24_13-45-55",
+            "content": "@@ -1,843 +1,4 @@\n-class Animal:%0A    def __init__(self, species: str, sound: str):%0A        self.species: str = species%0A        self.sound: str = sound%0A        self.age: int = 0%0A    %0A    def getMaxWetness(self) -%3E int:%0A        if self.size == %22P%22:%0A            return 10%0A        if self.size == %22M%22:%0A            return 20%0A        if self.size == %22G%22:%0A            return 30%0A        return 0%0A%0A    def dry(self, amount: int) -%3E None:%0A        self.wetness += amount%0A        if self.wetness %3E self.getMaxWetness():%0A            print(%22toalha encharcada%22)%0A            self.wetness = self.getMaxWetness()%0A    %0A    def wringOut(self) -%3E None:%0A        self.wetness = 0%0A    %0A    def isDry(self) -%3E bool:%0A        return self.wetness == 0%0A%0A%0A    def show(self) -%3E None:%0A        print(self)%0A%0A    def __str__(self) -%3E str:%0A        return f%22%7Bself.color%7D %7Bself.size%7D %7Bself.wetness%7D%22\n+prin\n",
+            "lines": "1"
+        },
+        {
+            "label": "2025-09-24_14-18-21",
+            "content": "@@ -151,8 +151,693 @@\n int = 0%0A\n+    %0A    def getMaxWetness(self) -%3E int:%0A        if self.size == %22P%22:%0A            return 10%0A        if self.size == %22M%22:%0A            return 20%0A        if self.size == %22G%22:%0A            return 30%0A        return 0%0A%0A    def dry(self, amount: int) -%3E None:%0A        self.wetness += amount%0A        if self.wetness %3E self.getMaxWetness():%0A            print(%22toalha encharcada%22)%0A            self.wetness = self.getMaxWetness()%0A    %0A    def wringOut(self) -%3E None:%0A        self.wetness = 0%0A    %0A    def isDry(self) -%3E bool:%0A        return self.wetness == 0%0A%0A%0A    def show(self) -%3E None:%0A        print(self)%0A%0A    def __str__(self) -%3E str:%0A        return f%22%7Bself.color%7D %7Bself.size%7D %7Bself.wetness%7D%22\n",
+            "lines": "33"
+        },
+        {
+            "label": "2025-09-24_14-22-13",
+            "content": "@@ -41,525 +41,95 @@\n cies\n-, sound,):%0A        self.species = species%0A        self.sound = sound%0A        self.age  = 0%0A%0Adef __str__ (self):%0A    return f%22%7Bself.species%7D: %7Bself.sound%7D:%7Bself.age%7D)%22%0A%0A%0Adef ageBy(self, increment):%0A        if self.age %3E= 4:%0A            print(f%22warning: %7Bself.species%7D morreu%22)%0A            return%0A            self.age += increment%0A            if self.age %3E= 4:%0A                self.age = 4%0A                print(f%22warning: %7Bself.species%7D morreu%22)%0A%0Adef makeSound(self):%0A        if self.age == 0:%0A            return %22---%22\n+: str, sound: str):%0A        self.species: str = species%0A        self.sound: str = sound\n %0A   \n@@ -137,21 +137,16 @@\n     \n-elif \n self.age\n  %3E= \n@@ -145,79 +145,14 @@\n .age\n- %3E= 4:%0A            return %22RIP%22%0A        else:%0A            return self.sound\n+: int = 0%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2025-09-25_18-08-22",
+            "content": "@@ -1,16 +1,4 @@\n-import sys%0A%0A\n clas\n@@ -19,14 +19,16 @@\n def \n+_\n _init_\n+_\n (sel\n@@ -41,35 +41,16 @@\n cies\n-: str = %22%22, sound: str = %22%22\n+, sound,\n ):%0A \n@@ -127,43 +127,34 @@\n age \n+ \n = 0%0A%0A\n-    \n def \n+__\n str\n+__ \n (self)\n- -%3E str:%0A    \n+:%0A\n     \n@@ -181,25 +181,28 @@\n es%7D:\n+ \n %7Bself.\n-age\n+sound\n %7D:%7Bself.\n soun\n@@ -201,21 +201,17 @@\n elf.\n-sound%7D%22%0A%0A    \n+age%7D)%22%0A%0A%0A\n def \n@@ -235,45 +235,10 @@\n ment\n+)\n :\n- int):%0A        self.age += increment\n %0A   \n@@ -329,64 +329,26 @@\n     \n-self.age = 4%0A%0A    def makeSound(self) -%3E str:%0A        if\n+return%0A           \n  sel\n@@ -357,487 +357,183 @@\n age \n-== 0:%0A            return %22---%22%0A        elif self.age %3E= 4:%0A            return %22RIP%22%0A        else:%0A            return self.sound%0A%0Adef main():%0A    animal = Animal(%22%22, %22%22)%0A    for raw in sys.stdin:%0A        line = raw.rstrip(%22%5Cn%22)%0A        if line == %22%22:%0A            continue%0A%0A        # Eco do comando%0A        print(f%22$%7Bline%7D%22)%0A%0A        parts = line.split()%0A        cmd = parts%5B0%5D%0A%0A        if cmd == %22end%22:%0A            break%0A%0A        elif cmd == %22init%22:%0A            if len(parts) %3E= 3\n++= increment%0A            if self.age %3E= 4:%0A                self.age = 4%0A                print(f%22warning: %7Bself.species%7D morreu%22)%0A%0Adef makeSound(self):%0A        if self.age == 0\n :%0A  \n@@ -546,232 +546,47 @@\n     \n-    species = parts%5B1%5D%0A                sound = parts%5B2%5D%0A                animal = Animal(species, sound)%0A%0A        elif cmd == %22show%22:%0A            print(animal.str())%0A%0A        elif cmd == %22grow%22:%0A            if len(parts)\n+return %22---%22%0A        elif self.age\n  %3E= \n-2\n+4\n :%0A  \n@@ -599,94 +599,33 @@\n     \n-    inc = int(parts%5B1%5D)%0A                animal.ageBy(inc)%0A%0A        elif cmd == %22noi\n+return %22RIP%22%0A        el\n se\n-%22\n :%0A  \n@@ -638,136 +638,21 @@\n     \n-print(animal.makeSound())%0A%0A        else:%0A            print(%22fail: comando invalido%22)%0A%0A        if _name_ == %22_main_%22:%0A         main()\n+return self.sound\n",
+            "lines": "26"
+        },
+        {
+            "label": "2025-09-26_20-44-35",
+            "content": "@@ -1382,16 +1382,24 @@\n lido%22)%0A%0A\n+        \n if _name\n@@ -1413,16 +1413,21 @@\n main_%22:%0A\n+     \n     main\n",
+            "lines": "63"
+        },
+        {
+            "label": "2025-09-26_21-04-52",
+            "content": "@@ -1389,16 +1389,14 @@\n %0Aif \n-_\n _name_\n-_\n  == \n",
+            "lines": "63"
+        },
+        {
+            "label": "2025-10-01_13-17-46",
+            "content": "@@ -1403,15 +1403,13 @@\n = %22_\n-_\n main_\n-_\n %22:%0A \n",
+            "lines": "63"
+        },
+        {
+            "label": "2025-10-01_13-17-58",
+            "content": "@@ -1,1424 +1,55 @@\n-import sys%0A%0Aclass Animal:%0A    def _init_(self, species: str = %22%22, sound: str = %22%22):%0A        self.species = species%0A        self.sound = sound%0A        self.age = 0%0A%0A    def str(self) -%3E str:%0A        return f%22%7Bself.species%7D:%7Bself.age%7D:%7Bself.sound%7D%22%0A%0A    def ageBy(self, increment: int):%0A        self.age += increment%0A        if self.age %3E= 4:%0A            print(f%22warning: %7Bself.species%7D morreu%22)%0A            self.age = 4%0A%0A    def makeSound(self) -%3E str:%0A        if self.age == 0:%0A            return %22---%22%0A        elif self.age %3E= 4:%0A            return %22RIP%22%0A        else:%0A            return self.sound%0A%0Adef main():%0A    animal = Animal(%22%22, %22%22)%0A    for raw in sys.stdin:%0A        line = raw.rstrip(%22%5Cn%22)%0A        if line == %22%22:%0A            continue%0A%0A        # Eco do comando%0A        print(f%22$%7Bline%7D%22)%0A%0A        parts = line.split()%0A        cmd = parts%5B0%5D%0A%0A        if cmd == %22end%22:%0A            break%0A%0A        elif cmd == %22init%22:%0A            if len(parts) %3E= 3:%0A                species = parts%5B1%5D%0A                sound = parts%5B2%5D%0A                animal = Animal(species, sound)%0A%0A        elif cmd == %22show%22:%0A            print(animal.str())%0A%0A        elif cmd == %22grow%22:%0A            if len(parts) %3E= 2:%0A                inc = int(parts%5B1%5D)%0A                animal.ageBy(inc)%0A%0A        elif cmd == %22noise%22:%0A            print(animal.makeSound())%0A%0A        else:%0A            print(%22fail: comando invalido%22)%0A%0Aif __name__ == %22_main_%22:%0A    main()\n+@@ -1403,13 +1403,15 @@%0A = %2522_%0A+_%0A main_%0A+_%0A %2522:%250A %0A\n",
+            "lines": "6"
+        },
+        {
+            "label": "2025-10-01_13-19-26",
+            "content": "@@ -31,16 +31,14 @@\n def \n-_\n _init_\n-_\n (sel\n@@ -169,15 +169,11 @@\n def \n-__\n str\n-__\n (sel\n@@ -1403,15 +1403,13 @@\n = %22_\n-_\n main_\n-_\n %22:%0A \n",
+            "lines": "63"
+        },
+        {
+            "label": "2025-10-01_13-32-33",
+            "content": "@@ -1121,16 +1121,22 @@\n t(animal\n+.str()\n )%0A%0A     \n",
+            "lines": "63"
+        },
+        {
+            "label": "2025-10-01_13-37-44",
+            "content": "import sys\n\nclass Animal:\n    def __init__(self, species: str = \"\", sound: str = \"\"):\n        self.species = species\n        self.sound = sound\n        self.age = 0\n\n    def __str__(self) -> str:\n        return f\"{self.species}:{self.age}:{self.sound}\"\n\n    def ageBy(self, increment: int):\n        self.age += increment\n        if self.age >= 4:\n            print(f\"warning: {self.species} morreu\")\n            self.age = 4\n\n    def makeSound(self) -> str:\n        if self.age == 0:\n            return \"---\"\n        elif self.age >= 4:\n            return \"RIP\"\n        else:\n            return self.sound\n\ndef main():\n    animal = Animal(\"\", \"\")\n    for raw in sys.stdin:\n        line = raw.rstrip(\"\\n\")\n        if line == \"\":\n            continue\n\n        # Eco do comando\n        print(f\"${line}\")\n\n        parts = line.split()\n        cmd = parts[0]\n\n        if cmd == \"end\":\n            break\n\n        elif cmd == \"init\":\n            if len(parts) >= 3:\n                species = parts[1]\n                sound = parts[2]\n                animal = Animal(species, sound)\n\n        elif cmd == \"show\":\n            print(animal)\n\n        elif cmd == \"grow\":\n            if len(parts) >= 2:\n                inc = int(parts[1])\n                animal.ageBy(inc)\n\n        elif cmd == \"noise\":\n            print(animal.makeSound())\n\n        else:\n            print(\"fail: comando invalido\")\n\nif __name__ == \"__main__\":\n    main()",
+            "lines": "63"
+        }
+    ]
+}

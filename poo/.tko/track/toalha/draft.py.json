@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2025-09-24_14-03-37",
+            "content": "@@ -397,21 +397,16 @@\n %3E None:%0A\n-    %0A\n         \n",
+            "lines": "33"
+        },
+        {
+            "label": "2025-09-26_20-48-01",
+            "content": "class Towel:\n    def __init__(self, color: str, size: str):\n        self.color: str = color\n        self.size: str = size\n        self.wetness: int = 0\n    \n    def getMaxWetness(self) -> int:\n        if self.size == \"P\":\n            return 10\n        if self.size == \"M\":\n            return 20\n        if self.size == \"G\":\n            return 30\n        return 0\n\n    def dry(self, amount: int) -> None:\n    \n        self.wetness += amount\n        if self.wetness > self.getMaxWetness():\n            print(\"toalha encharcada\")\n            self.wetness = self.getMaxWetness()\n    \n    def wringOut(self) -> None:\n        self.wetness = 0\n    \n    def isDry(self) -> bool:\n        return self.wetness == 0\n\n\n    def show(self) -> None:\n        print(self)\n\n    def __str__(self) -> str:\n        return f\"{self.color} {self.size} {self.wetness}\"",
+            "lines": "34"
+        }
+    ]
+}

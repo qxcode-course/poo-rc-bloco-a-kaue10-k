@@ -1,0 +1,19 @@
+remote: https://github.com/qxcodepoo/arcade/blob/master/Readme.md
+lang: py
+filter:
+- BLOCO_A
+- BLOCO_B
+version: 0.0.1
+database: database
+expanded:
+- bloco_a-práticas-com-o-git
+- bloco_b-primeiras-classes
+- campanha-principal
+tasks: {}
+flags:
+  quests: 0
+  tracks: 0
+  tasks: 0
+  graph: 0
+  xray: 0
+index: animal
